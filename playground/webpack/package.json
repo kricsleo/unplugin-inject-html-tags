@@ -1,0 +1,17 @@
+{
+  "name": "webpack-playground",
+  "version": "1.0.0",
+  "private": true,
+  "author": "kricsleo",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode=development",
+    "start": "webpack serve --mode=development "
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.0",
+    "webpack": "5.93.0",
+    "webpack-cli": "5.1.4",
+    "webpack-dev-server": "5.0.4"
+  }
+}
