@@ -10,7 +10,6 @@ npm i -D unplugin-inject-html-tags
 
 ## Usage
 
-
 <details>
 <summary>Vite</summary>
 
@@ -58,7 +57,7 @@ module.exports = {
           injectTo: 'head-prepend'
         }
       ]
-    }})
+    })
   ]
 }
 ```
@@ -98,3 +97,7 @@ module.exports = {
 ## Options
 
 - `tags`: [`HtmlTagDescriptor[]`](https://vitejs.dev/guide/api-plugin.html#transformindexhtml)
+
+## Thanks
+
+- [unplugin-inject-preload](https://github.com/Applelo/unplugin-inject-preload) - mostly inspired by it.
