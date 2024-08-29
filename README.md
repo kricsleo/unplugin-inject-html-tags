@@ -21,18 +21,10 @@ export default defineConfig({
   plugins: [
     unpluginInjectHtmlTags({
       tags: [
-        {
-          tag: 'script',
-          attrs: {
-            src: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js'
-          },
-          injectTo: 'head-prepend'
-        },
-        {
-          tag: 'script',
-          children: 'console.log("script injected")',
-          injectTo: 'body'
-        },
+        { tag: 'script', attrs: { src: 'https://example.com/index.js' }, injectTo: 'body-prepend' },
+        { tag: 'script', children: 'console.log("injected inline scripts.")', injectTo: 'body' },
+        { tag: 'meta', attrs: { name: 'description', content: 'Page Description' }, injectTo: 'head-prepend' },
+        { tag: 'style', children: 'body{color:skyblue;}', injectTo: 'head' },
       ]
     }),
   ],
@@ -54,18 +46,10 @@ module.exports = {
   plugins: [
     unpluginInjectHtmlTags({
       tags: [
-        {
-          tag: 'script',
-          attrs: {
-            src: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js'
-          },
-          injectTo: 'head-prepend'
-        },
-        {
-          tag: 'script',
-          children: 'console.log("script injected")',
-          injectTo: 'body'
-        },
+        { tag: 'script', attrs: { src: 'https://example.com/index.js' }, injectTo: 'body-prepend' },
+        { tag: 'script', children: 'console.log("injected inline scripts.")', injectTo: 'body' },
+        { tag: 'meta', attrs: { name: 'description', content: 'Page Description' }, injectTo: 'head-prepend' },
+        { tag: 'style', children: 'body{color:skyblue;}', injectTo: 'head' },
       ]
     })
   ]
@@ -88,18 +72,10 @@ module.exports = {
     plugins: [
       unpluginInjectHtmlTags({
         tags: [
-          {
-            tag: 'script',
-            attrs: {
-              src: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js'
-            },
-            injectTo: 'head-prepend'
-          },
-          {
-            tag: 'script',
-            children: 'console.log("script injected")',
-            injectTo: 'body'
-          },
+          { tag: 'script', attrs: { src: 'https://example.com/index.js' }, injectTo: 'body-prepend' },
+          { tag: 'script', children: 'console.log("injected inline scripts.")', injectTo: 'body' },
+          { tag: 'meta', attrs: { name: 'description', content: 'Page Description' }, injectTo: 'head-prepend' },
+          { tag: 'style', children: 'body{color:skyblue;}', injectTo: 'head' },
         ]
       }),
     ],
@@ -108,6 +84,12 @@ module.exports = {
 ```
 
 </details>
+
+## Preview
+
+<div align="center">
+  <img src="./assets/preview.png" />
+</div>
 
 ## Options
 

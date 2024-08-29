@@ -8,34 +8,10 @@ export default defineConfig({
     Inspect(),
     unpluginInjectHtmlTags({
       tags: [
-        {
-          tag: 'script',
-          attrs: {
-            src: 'https://cdn.jsdelivr.net/npm/lodash@1',
-          },
-          injectTo: 'head-prepend',
-        },
-        {
-          tag: 'script',
-          attrs: {
-            src: 'https://cdn.jsdelivr.net/npm/lodash@2',
-          },
-          injectTo: 'head',
-        },
-        {
-          tag: 'script',
-          attrs: {
-            src: 'https://cdn.jsdelivr.net/npm/lodash@3',
-          },
-          injectTo: 'body-prepend',
-        },
-        {
-          tag: 'script',
-          attrs: {
-            src: 'https://cdn.jsdelivr.net/npm/lodash@4',
-          },
-          injectTo: 'body',
-        },
+        { tag: 'script', attrs: { src: 'https://example.com/index.js' }, injectTo: 'body-prepend' },
+        { tag: 'script', children: 'console.log("injected inline scripts.")', injectTo: 'body' },
+        { tag: 'meta', attrs: { name: 'description', content: 'Page Description' }, injectTo: 'head-prepend' },
+        { tag: 'style', children: 'body{color:skyblue;}', injectTo: 'head' },
       ],
     }),
   ],
