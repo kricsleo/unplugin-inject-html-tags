@@ -24,10 +24,15 @@ export default defineConfig({
         {
           tag: 'script',
           attrs: {
-            src: 'lodash'
+            src: 'https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js'
           },
           injectTo: 'head-prepend'
-        }
+        },
+        {
+          tag: 'script',
+          children: 'console.log("script injected")',
+          injectTo: 'body'
+        },
       ]
     }),
   ],
